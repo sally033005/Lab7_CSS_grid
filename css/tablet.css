@@ -14,11 +14,20 @@ h1 {
     margin: 0;
 }
 
-.flex_container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; 
+.grid_container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "A A"
+    "B C"
+    "D D";
 }
+.A {grid-area: A;}
+.B {grid-area: B;}
+.C {grid-area: C;
+    margin: 50px 20px auto 10px;}
+.D {grid-area: D;}
 
 nav{
     margin: 0;
@@ -54,24 +63,19 @@ nav ul li {
 }
 
 main {
-    display: flex;
     padding-left: 20px;
     background-color: white;
 }
 
 img {
-    height: 400px;
-    margin: 50px 0 50px 20px;
+    width: 100%;
+    height: auto;
 }
 
 footer{
     background-color: #869dc7;
     text-align: center;
     color: darkblue;
-}
-
-footer p {
-    margin-top: 0;
 }
 
 h2 {
